@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    working_dir: /go/src/app
+    volumes:
+      - .:/go/src/app
+    stdin_open: true
+    tty: true
+
